@@ -19,25 +19,25 @@
 </head>
 <body>
     <!-- LANDING PAGE -->
-    <section id="landing__page">
+    <section id="landing__page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/B_Monogram.png" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
-                    link_hover-effect--black">
+                    link__hover-effect--black">
                     About
                     </a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover-effect
-                    link_hover-effect--black">
+                    link__hover-effect--black">
                     Projects
                     </a>
                 </li>
@@ -45,7 +45,7 @@
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
-                    link_hover-effect--black">
+                    link__hover-effect--black">
                     Contact
                     </a>
                 </li>
@@ -53,7 +53,7 @@
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
-                    link_hover-effect--black">
+                    link__hover-effect--black">
                     <i class="fas fa-adjust" onclick="toggleContrast()"></i>
                     </a>
                 </li>
@@ -62,7 +62,7 @@
         <header class="header">
             <div class="header__content">
                 <h1 class="title">Hey</h1>
-                <h1 class="title myColor">I'm Brandon</h1>
+                <h1 class="title myColor">I'm Brandon.</h1>
                 <p class="header__para">
                     Aspiring <span class="myColot">Frontend Software engineer</span> with a specialization in Computer Science from the University of California, Irvine. Aiming to leverage proven communication, planning, problem-solving, and teamwork skills to successfully fill the open position at your company.
                     <br>
@@ -81,9 +81,11 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click" onclick="toggleModal()">
-            <i class="fas fa-envelope"></i>
-        </button>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -165,6 +167,15 @@
                 </div>
             </div>
         </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
 
     <!-- PROJECTS PAGE -->
@@ -264,25 +275,25 @@
                     <img src="./assets/B_Monogram.png" class="footer__logo--img" alt="">
                 </figure>
                 <div class="footer__social--list">
-                    <a href="https://github.com/brandonlibertore" class="
-                    footer__social--link
-                    link__hover-effect
-                    link__hover-effect--white">
-                    Github
-                    </a>
-                    <a href="#" class="
+                    <a href="https://www.linkedin.com/in/brandonlibertore/" target="_blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white">
                     LinkedIn
                     </a>
-                    <a href="#" class="
+                    <a href="https://github.com/brandonlibertore" target="_blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white">
+                    Github
+                    </a>
+                    <a href="#" onclick="toggleModal()" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white">
                     Contact
                     </a>
-                    <a href="#" class="
+                    <a href="./assets/Brandon Le Libertore Resume 2022 .pdf" target="_blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white">

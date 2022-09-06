@@ -1,8 +1,32 @@
 let isModalOpen = false
 let contrastToggle = false
+const scaleFactor = 1/20
 
 function toggleContrast(){
-    document.body.classList += " dark-theme"
+    contrastToggle = !contrastToggle
+    if (contrastToggle){
+        document.body.classList += " dark-theme"
+    }
+    else{
+        document.body.classList.remove("dark-theme")
+    }
+}
+
+function moveBackground(event){
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX * scaleFactor
+    const y = event.clientY * scaleFactor
+
+    for (let i = 0; i < shapes.length; ++i){
+        // EVEN
+        if (i % 2 == 0){
+            shapes[i].style.transform = `translate(${x}px, ${y}px)`
+        }
+        // ODD
+        else{
+            shapes[i].style.transform = `translate(-${x}px, -${y}px)`
+        }
+    }
 }
 
 function contact(event){
