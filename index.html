@@ -7,7 +7,15 @@
     <title>Brandon Libertore</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-    <script src="./index.js" defer></script>
+    <script src="./index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("X0qt-ljzMULF553SN");
+        })();
+    </script>
 </head>
 <body>
     <!-- LANDING PAGE -->
@@ -33,7 +41,7 @@
                     Projects
                     </a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -46,7 +54,7 @@
                     nav__link--anchor
                     link__hover-effect
                     link_hover-effect--black">
-                    <i class="fas fa-adjust"></i>
+                    <i class="fas fa-adjust" onclick="toggleContrast()"></i>
                     </a>
                 </li>
             </ul>
@@ -58,7 +66,7 @@
                 <p class="header__para">
                     Aspiring <span class="myColot">Frontend Software engineer</span> with a specialization in Computer Science from the University of California, Irvine. Aiming to leverage proven communication, planning, problem-solving, and teamwork skills to successfully fill the open position at your company.
                     <br>
-                    Here's a bit more <span class="myColor"><b>about me.</b></span>
+                    Here's a bit more <b class="myColor click" onclick="toggleModal()">about me.</b>
                 </p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/brandonlibertore/" target="_blank" class="social__link click">
@@ -73,18 +81,88 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
+
+        <!-- MODAL -->
         <div class="modal">
             <div class="modal__half modal__about">
-                Here's a bit about me.
+                <h3 class="modal__title modal__title--about">
+                    Here's a bit about me.
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--about">
+                    Aspiring Frontend Software Engineer.
+                </h4>
+                <p class="modal__para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit iste, veniam deserunt quo, dolores voluptatum expedita eum repellendus eius repellat ut! Minima tenetur animi unde aut! Tempora nulla labore porro.
+                    <br>
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/HTML.png" alt="">
+                        <span class="language__name"><b>HTML</b></span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/CSS.png" alt="">
+                        <span class="language__name"><b>CSS</b></span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/Javascript.png" alt="">
+                        <span class="language__name"><b>Javascript</b></span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/Python.png" alt="">
+                        <span class="language__name"><b>Python</b></span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/C++.png" alt="">
+                        <span class="language__name"><b>C++</b></span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/Java.png" alt="">
+                        <span class="language__name"><b>Java</b></span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/SQL.png" alt="">
+                        <span class="language__name"><b>SQL</b></span>    
+                    </figure>
+                </div>
             </div>
             <div class="modal__half modal__contact">
-                Let's have a chat
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    I'm current open to new opportunities!
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way!
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon!
+                </div>
             </div>
         </div>
     </section>
