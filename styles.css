@@ -58,7 +58,7 @@ input:hover, textarea:hover{
 }
 
 input:focus, textarea:focus{
-    border-color: red;
+    border-color: #8EB1D9;
 }
 
 textarea{
@@ -85,7 +85,7 @@ label{
 }
 
 .myColor{
-    color:red
+    color:#8EB1D9
 }
 
 .click{
@@ -154,6 +154,10 @@ nav,
     color: white;
 }
 
+.dark-theme .myColor{
+    color: #8EB1D9;
+}
+
 .dark-theme section{
     background-color: #242424;
 }
@@ -192,6 +196,7 @@ LANDING PAGE
     width: 100%;
     max-width: 1000px;
     padding: 0 30px;
+    z-index: 1;
 }
 
 .title{
@@ -201,10 +206,39 @@ LANDING PAGE
     line-height: 1;
 }
 
+.header__half{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .header__para{
     font-size: 24px;
     line-height: 2;
+    width: 50%;
     max-width: 450px;
+}
+
+.header__img--wrapper{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal__img--mask{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+    margin-bottom: 28px;
+}
+
+.personal__img{
+    width: 100%;
+    transform: scale(1.5);
+    padding-top: 8px;
 }
 
 .social__list{
@@ -213,7 +247,7 @@ LANDING PAGE
 }
 
 .social__link{
-    background-color: red;
+    background-color: #8EB1D9;
     color: white;
     padding: 6px;
     width: 32px;
@@ -274,6 +308,20 @@ LANDING PAGE
 
     100%{
         transform: translateY(-3px);
+    }
+}
+
+@keyframes animate-profile-picture{
+    0%{
+        transform: scale(0);
+    }
+
+    80%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
     }
 }
 
@@ -424,8 +472,9 @@ MODAL
 }
 
 .form__submit{
-    background-color: red;
-    border: 2px solid red;
+    background-color: #8EB1D9;
+    border: 2px solid #8EB1D9;
+    border-radius: 10px;
     color: white;
     font-weight: 700;
     width: 100%;
@@ -441,8 +490,8 @@ MODAL
 }
 
 .form__submit:active{
-    border-color: red;
-    color: red;
+    border-color: #8EB1D9;
+    color: #8EB1D9;
 }
 
 .modal__overlay{
@@ -511,6 +560,7 @@ PROJECTS PAGE
 .project__img{
     width: 100%;
     transition: all 600ms ease;
+    transform: scale(1.02);
 }
 
 .project__wrapper{
@@ -575,6 +625,18 @@ PROJECTS PAGE
     margin: 16px 0;
 }
 
+.bullet__info{
+    text-decoration: dotted;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+
+.bullet{
+    list-style-type: circle;
+}
+
 /* 
 FOOTER 
 */
@@ -589,6 +651,26 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer__anchor{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer__anchor:hover .footer__logo--popper{
+    transform: translateX(60px);
+    opacity: 1;
+}
+
+.footer__logo--popper{
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
 }
 
 .footer__logo--img{
@@ -618,38 +700,54 @@ SHAPES
 .shape--0{
     top: 15vh;
     left: 5vw;
+    width: 100px;
 }
+
 .shape--1{
     top: 15vh;
-    left: 50vw;
+    left: 45vw;
+    width: 100px;
 }
+
 .shape--2{
     top: 15vh;
     left: 80vw;
+    width: 150px;
 }
+
 .shape--3{
     top: 50vh;
     left: 5vw;
+    width: 125px;
 }
+
 .shape--4{
     top: 50vh;
-    left: 50vw;
+    left: 45vw;
 }
+
 .shape--5{
     top: 50vh;
     left: 80vw;
+    width: 100px;
 }
+
 .shape--6{
     top: 80vh;
     left: 5vw;
+    width: 100px;
 }
+
 .shape--7{
     top: 80vh;
-    left: 50vw;
+    left: 45vw;
+    width: 100px;
 }
+
 .shape--8{
     top: 80vh;
     left: 80vw;
+    width: 100px;
 }
 
 
@@ -657,12 +755,21 @@ SHAPES
 RESPONSIVENESS 
 */
 @media (max-width: 768px){
+    .shape{
+        display: none;
+    }
+
     .title{
         font-size: 80px;
     }
 
     .header__para{
         font-size: 20px;
+        width: 100%;
+    }
+
+    .header__img--wrapper{
+        display: none;
     }
 
     .modal{

@@ -63,11 +63,19 @@
             <div class="header__content">
                 <h1 class="title">Hey</h1>
                 <h1 class="title myColor">I'm Brandon.</h1>
-                <p class="header__para">
-                    Aspiring <span class="myColot">Frontend Software engineer</span> with a specialization in Computer Science from the University of California, Irvine. Aiming to leverage proven communication, planning, problem-solving, and teamwork skills to successfully fill the open position at your company.
-                    <br>
-                    Here's a bit more <b class="myColor click" onclick="toggleModal()">about me.</b>
-                </p>
+                <div class="header__half">
+                    <p class="header__para">
+                        Aspiring <span class="myColor">Frontend Software engineer</span> with a specialization in Computer Science from the University of California, Irvine.
+                        Have a look at my GitHub, LinkedIn, and Resume!
+                        <br>
+                        Here's a bit more <b class="myColor click" onclick="toggleModal()">about me.</b>
+                    </p>
+                    <div class="header__img--wrapper">
+                        <figure class="personal__img--mask">
+                            <img src="./assets/4B5FB154-F621-47C9-9549-68E1F5AE2540_Original (1).jpg" class="personal__img" alt="">
+                        </figure>
+                    </div>
+                </div>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/brandonlibertore/" target="_blank" class="social__link click">
                         <i class="fab fa-linkedin-in"></i>
@@ -100,7 +108,7 @@
                     Aspiring Frontend Software Engineer.
                 </h4>
                 <p class="modal__para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit iste, veniam deserunt quo, dolores voluptatum expedita eum repellendus eius repellat ut! Minima tenetur animi unde aut! Tempora nulla labore porro.
+                    Aiming to leverage proven communication, planning, problem-solving, and teamwork skills to successfully fill the open position at your company.
                     <br>
                 </p>
                 <div class="modal__languages">
@@ -167,15 +175,15 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/semi circle.svg" class="shape shape--0">
-        <img src="./assets/circle.svg" class="shape shape--1">
-        <img src="./assets/squiggly.svg" class="shape shape--2">
-        <img src="./assets/circle.svg" class="shape shape--3">
-        <img src="./assets/triangle.svg" class="shape shape--4">
-        <img src="./assets/circle.svg" class="shape shape--5">
-        <img src="./assets/squiggly.svg" class="shape shape--6">
-        <img src="./assets/circle.svg" class="shape shape--7">
-        <img src="./assets/semi circle.svg" class="shape shape--8">
+        <img src="./assets/zotHand.gif" class="shape shape--0">
+        <img src="./assets/student.png" class="shape shape--1">
+        <img src="./assets/anteater.gif" class="shape shape--2">
+        <img src="./assets/UCI.gif" class="shape shape--3">
+        <img src="" class="shape shape--4">
+        <img src="./assets/peter.gif" class="shape shape--5">
+        <img src="./assets/boba.png" class="shape shape--6">
+        <img src="./assets/zotZot.gif" class="shape shape--7">
+        <img src="./assets/student2.png" class="shape shape--8">
     </section>
 
     <!-- PROJECTS PAGE -->
@@ -187,47 +195,38 @@
                 </h1>
                 <ul class="project__list">
                     <li class="project">
-                        <!-- PROJECT 1 -->
+                        <!-- Eportfolio -->
                         <div class="project__wrapper">
-                            <img src="./assets/CloudyWeb.png" class="project__img" alt="">
+                            <img src="./assets/eportfolio.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
-                                    Project NUM
+                                    Advanced Eportfolio
                                 </h3>
                                 <h4 class="project__description--sub-title">
-                                    List of Tech stack.
+                                    HTML, CSS, Javascript
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto tenetur, doloremque, ut, tempora magnam qui possimus itaque molestiae officiis a quam commodi nostrum! Tempore totam est eaque eum autem.
+                                    <ul class="bullet__info">
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                    </ul>
                                 </p>
                                 <div class="project__description--links">
-                                    <a href="https://github.com/brandonlibertore" class="project__description--link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="#" class="project__description--link">
-                                        <i class="fas fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- PROJECT 2 -->
-                        <div class="project__wrapper">
-                            <img src="./assets/CloudyWeb.png" class="project__img" alt="">
-                            <div class="project__wrapper--bg"></div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Project NUM
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    List of Tech stack.
-                                </h4>
-                                <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto tenetur, doloremque, ut, tempora magnam qui possimus itaque molestiae officiis a quam commodi nostrum! Tempore totam est eaque eum autem.
-                                </p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/brandonlibertore" class="project__description--link">
+                                    <a href="https://github.com/brandonlibertore/CS122B-FE2" class="project__description--link">
                                         <i class="fab fa-github"></i>
                                     </a>
                                     <a href="#" class="project__description--link">
@@ -237,22 +236,202 @@
                             </div>
                         </div>
 
-                        <!-- PROJECT 3 -->
+                        <!-- TREACT -->
+                        <div class="project__wrapper">
+                            <img src="./assets/treact.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Treact
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, Javascript
+                                </h4>
+                                <p class="project__description--para">
+                                    <ul class="bullet__info">
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                    </ul>
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/brandonlibertore/CS122B-FE2" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LIBRARY ECOMMERCE WEB -->
+                        <div class="project__wrapper">
+                            <img src="./assets/ecommerce.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Library Ecommerce
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, Javascript
+                                </h4>
+                                <p class="project__description--para">
+                                    <ul class="bullet__info">
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                        <li class="bullet">
+
+                                        </li>
+                                    </ul>
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/brandonlibertore/CS122B-FE2" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FABFLIX -->
+                        <div class="project__wrapper">
+                            <img src="./assets/FabFlix.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    FabFlix
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Java, React, HTML, CSS, Javascript, SQL, Maven, Bootstrap, JDBC
+                                </h4>
+                                <p class="project__description--para">
+                                    <ul class="bullet__info">
+                                        <li class="bullet">
+                                            Online ecommerce website based on Netflix to locate, display, and purchase movies.
+                                        </li>
+                                        <li class="bullet">
+                                            Developed IDM, Movies, Billing, and Gateway Services applying Java, Spring Boot, Jackson, SQL, MySQL, JDBC, and NamedParameterJDBCTemplate storing 10,000+ unique movies and 100,000+ unique persons.
+                                        </li>
+                                        <li class="bullet">
+                                            Implemented an encrypted user registration and login feature that succeeds in protecting against 99.99% of non-genuine attempts and 100% success login rate.
+                                        </li>
+                                        <li class="bullet">
+                                            Devised a movie querying system with 10 unique filter options permitting purchase of movies via Stripe API.
+                                        </li>
+                                        <li class="bullet">
+                                            Established basic frontend to display the registration and login page. Included a movie search page to allow for user queries and the 10 most relevant films using JavaScript, HTML, CSS, React, JSX, and BootStrap.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/brandonlibertore/CS122B-FE2" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CLOUDY HAPPINESS -->
                         <div class="project__wrapper">
                             <img src="./assets/CloudyWeb.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
-                                    Project NUM
+                                    Cloudy Happiness
                                 </h3>
                                 <h4 class="project__description--sub-title">
-                                    List of Tech stack.
+                                    HTML, CSS, Javascript, Shopify API, Figma
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto tenetur, doloremque, ut, tempora magnam qui possimus itaque molestiae officiis a quam commodi nostrum! Tempore totam est eaque eum autem.
+                                    <ul class="bullet__info">
+                                        <li class="bullet">
+                                            Online ecommerce website to sell clothing via Shopify API
+                                        </li>
+                                        <li class="bullet">
+                                            Co-led and initiated meetings with clientele through daily communication via Zoom and Discord. Presented biweekly informative updates on the progression of the project and meetings with clientele.
+                                        </li>
+                                        <li class="bullet">
+                                            Analyzed clientele feedback leading to two iteration phases of designs for the “Home”, “About Us”, “Products”, footer, and order page through Figma over a 10 week period.    
+                                        </li>
+                                        <li class="bullet">
+                                            Created and drafted prototypes of the “About Us” page, “Learn More” button, and website footer using JavaScript, HTML, and CSS.
+                                        </li>
+                                        <li class="bullet">
+                                            Launched a prototype of the website resulting in 300+ new impressions and 20+ new orders post deployment of the website’s launch (present).
+                                        </li>
+                                    </ul>
                                 </p>
                                 <div class="project__description--links">
-                                    <a href="https://github.com/brandonlibertore" class="project__description--link">
+                                    <a href="https://github.com/brandonlibertore/CloudyHappiness" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SEARCH ENGINE -->
+                        <div class="project__wrapper">
+                            <img src="./assets/SearchEngine.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Search Engine
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Python
+                                </h4>
+                                <p class="project__description--para">
+                                    <ul class="bullet__info">
+                                        <li class="bullet">
+                                            Software system to execute web searches amongst the indexed content of the “uci.edu” domain and subdomains.
+                                        </li>
+                                        <li class="bullet">
+                                            Performed the creation and concatenation of three partial indices of size 1024MB prior to the final construction of an inverted index.
+                                        </li>
+                                        <li class="bullet">
+                                            Built an inverted index of over 55,000 unique URLs in Python that tokenizes and maps each word to a document id and term frequency-inverse document frequency score (word weight/significance).
+                                        </li>
+                                        <li class="bullet">
+                                            Constructed a search component to retrieve and display the 10 most relevant URLs to any query under 300ms.
+                                        </li>
+                                        <li class="bullet">
+                                            Facilitated workloads and coordinated weekly milestone deadlines between a two-person team.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/brandonlibertore/CS121-Search-Engine" class="project__description--link">
                                         <i class="fab fa-github"></i>
                                     </a>
                                     <a href="#" class="project__description--link">
@@ -271,9 +450,15 @@
     <footer>
         <div class="container">
             <div class="row footer__row">
-                <figure>
-                    <img src="./assets/B_Monogram.png" class="footer__logo--img" alt="">
-                </figure>
+                <a href="#" class="footer__anchor">
+                    <figure class="footer__logo">
+                        <img src="./assets/B_Monogram.png" class="footer__logo--img" alt="">
+                    </figure>
+                    <span class="footer__logo--popper">
+                        Top
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </a>
                 <div class="footer__social--list">
                     <a href="https://www.linkedin.com/in/brandonlibertore/" target="_blank" class="
                     footer__social--link

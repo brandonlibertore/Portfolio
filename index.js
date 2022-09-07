@@ -1,6 +1,6 @@
 let isModalOpen = false
 let contrastToggle = false
-const scaleFactor = 1/20
+const scaleFactor = 1/40
 
 function toggleContrast(){
     contrastToggle = !contrastToggle
