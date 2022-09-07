@@ -90,7 +90,7 @@
             </div>
         </header>
         <a href="#">
-            <button class="mail__btn click" onclick="toggleModal()">
+            <button class="mail__btn click" onclick="toggleModal(); removeSuccess()">
                 <i class="fas fa-envelope"></i>
             </button>
         </a>
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
-                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <i class="fas fa-times modal__exit click" onclick="toggleModal(); removeSuccess()"></i>
                 <h3 class="modal__title modal__title--contact">
                     Let's have a chat!
                 </h3>

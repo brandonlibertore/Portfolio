@@ -49,6 +49,11 @@ function contact(event){
             })
 }
 
+function removeSuccess(){
+    const success = document.querySelector(".modal__overlay--success")
+    success.remove("modal__overlay--visibile")
+}
+
 function toggleModal(){
     if (isModalOpen){
         isModalOpen = false
