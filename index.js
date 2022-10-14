@@ -35,7 +35,7 @@ function contact(event) {
   loading.classList += " modal__overlay--visibile";
   emailjs
     .sendForm(
-      "service_g5elsym",
+      "service_b6w94eq",
       "template_goi76kf",
       event.target,
       "X0qt-ljzMULF553SN"
@@ -47,7 +47,7 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visibile");
       alert(
-        "The email service is temprarily unavailable. Please contact me directly on bliberto@uci.edu"
+        "The email service is temporarily unavailable. Please contact me directly on brandon@brandonlibertore.net"
       );
     });
 }
