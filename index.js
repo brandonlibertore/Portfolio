@@ -1,64 +1,67 @@
-let isModalOpen = false
-let contrastToggle = false
-const scaleFactor = 1/40
+let isModalOpen = false;
+let contrastToggle = false;
+const scaleFactor = 1 / 40;
 
-function toggleContrast(){
-    contrastToggle = !contrastToggle
-    if (contrastToggle){
-        document.body.classList += " dark-theme"
-    }
-    else{
-        document.body.classList.remove("dark-theme")
-    }
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList += " dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
 }
 
-function moveBackground(event){
-    const shapes = document.querySelectorAll(".shape")
-    const x = event.clientX * scaleFactor
-    const y = event.clientY * scaleFactor
+function moveBackground(event) {
+  const shapes = document.querySelectorAll(".shape");
+  const x = event.clientX * scaleFactor;
+  const y = event.clientY * scaleFactor;
 
-    for (let i = 0; i < shapes.length; ++i){
-        // EVEN
-        if (i % 2 == 0){
-            shapes[i].style.transform = `translate(${x}px, ${y}px)`
-        }
-        // ODD
-        else{
-            shapes[i].style.transform = `translate(-${x}px, -${y}px)`
-        }
+  for (let i = 0; i < shapes.length; ++i) {
+    // EVEN
+    if (i % 2 == 0) {
+      shapes[i].style.transform = `translate(${x}px, ${y}px)`;
     }
-}
-
-function contact(event){
-    event.preventDefault()
-    const loading = document.querySelector(".modal__overlay--loading")
-    const success = document.querySelector(".modal__overlay--success")
-    loading.classList += " modal__overlay--visibile"
-    emailjs
-        .sendForm(
-            'service_gy9vjoc', 
-            'template_goi76kf', 
-            event.target, 
-            'X0qt-ljzMULF553SN'
-            ).then(() => {
-                loading.classList.remove("modal__overlay--visibile")
-                success.classList += " modal__overlay--visibile"
-            }).catch(() => {
-                loading.classList.remove("modal__overlay--visibile")
-                alert("The email service is temprarily unavailable. Please contact me directly on bliberto@uci.edu")
-            })
-}
-
-function removeSuccess(){
-    const success = document.querySelector(".modal__overlay--success")
-    success.remove("modal__overlay--visibile")
-}
-
-function toggleModal(){
-    if (isModalOpen){
-        isModalOpen = false
-        return document.body.classList.remove("modal--open")
+    // ODD
+    else {
+      shapes[i].style.transform = `translate(-${x}px, -${y}px)`;
     }
-    isModalOpen = true
-    document.body.classList += " modal--open"
+  }
+}
+
+function contact(event) {
+  event.preventDefault();
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
+  loading.classList += " modal__overlay--visibile";
+  emailjs
+    .sendForm(
+      "service_g5elsym",
+      "template_goi76kf",
+      event.target,
+      "X0qt-ljzMULF553SN"
+    )
+    .then(() => {
+      loading.classList.remove("modal__overlay--visibile");
+      success.classList += " modal__overlay--visibile";
+    })
+    .catch(() => {
+      loading.classList.remove("modal__overlay--visibile");
+      alert(
+        "The email service is temprarily unavailable. Please contact me directly on bliberto@uci.edu"
+      );
+    });
+}
+
+function removeSuccess() {
+  const success = document.querySelector(".modal__overlay--success");
+  success.remove("modal__overlay--visibile");
+}
+
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open");
+  }
+  isModalOpen = true;
+  document.body.classList += " modal--open";
 }
